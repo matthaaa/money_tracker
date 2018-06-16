@@ -6,10 +6,7 @@ import React from 'react';
 
 
 const App = ({children}) => (
-  <div>Hi mom!
-    <section className="main-view">
-    </section>
-  </div>
+  <div>Hi mom!</div>
 );
 
 
