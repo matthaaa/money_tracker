@@ -3,7 +3,10 @@ import {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 // Components
-// import NewUserForm from './components/new_user_form';
+import CustomButton from '../generic/buttons/custom_button';
+
+// Forms
+import NewUserForm from './forms/new_user_form';
 
 
 class SignupView extends Component {
@@ -51,12 +54,6 @@ class SignupView extends Component {
   render() {
     return (
       <div className="signup-view-main-content fadeIn">
-        <CustomButton
-          isLink
-          path={"/login/demo"}
-          text={"Log in with Demo"}
-        />
-        {this.renderOrBar()}
         <NewUserForm
           errors={this.props.errors}
           formUser={this.state}
