@@ -12,6 +12,27 @@ class NewUserForm extends Component {
   // ==================================================
   // Render
   // ==================================================
+  renderNameInput(formUser, onUpdate) {
+    return (
+      <div>
+        <FormInput
+          type="text"
+          contentClassName={"signup-input"}
+          placeholder={"First Name"}
+          value={formUser.first_name}
+          onChange={onUpdate('first_name')}
+        />
+        <FormInput
+          type="text"
+          contentClassName={"signup-input"}
+          placeholder={"Last Name"}
+          value={formUser.last_name}
+          onChange={onUpdate('last_name')}
+        />
+      </div>
+    );
+  }
+
   renderEmailInput(formUser, onUpdate) {
     return (
       <FormInput
@@ -20,18 +41,6 @@ class NewUserForm extends Component {
         placeholder={"Email"}
         value={formUser.email}
         onChange={onUpdate('email')}
-      />
-    );
-  }
-
-  renderNameInput(formUser, onUpdate) {
-    return (
-      <FormInput
-        type="text"
-        contentClassName={"signup-input"}
-        placeholder={"Full Name"}
-        value={formUser.full_name}
-        onChange={onUpdate('full_name')}
       />
     );
   }
@@ -71,8 +80,8 @@ class NewUserForm extends Component {
     return (
       <div>
         <form className="signup-form">
-          {this.renderEmailInput(formUser, onUpdate)}
           {this.renderNameInput(formUser, onUpdate)}
+          {this.renderEmailInput(formUser, onUpdate)}
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
           <CustomButton text={"Sign Up"} onPress={onSubmit} className="signup-form-button"/>
