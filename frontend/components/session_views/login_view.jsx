@@ -55,6 +55,7 @@ class LoginView extends Component {
             onSubmit={this.handleSubmit}
             onUpdate={this.handleUpdate}
           />
+        <Link to="/signup">Sign Up!</Link>
         </div>
       </main>
     );

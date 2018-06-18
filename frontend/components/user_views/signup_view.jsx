@@ -60,6 +60,7 @@ class SignupView extends Component {
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
+      <Link to="/login">Log In</Link>
       </div>
     );
   }
