@@ -27,9 +27,6 @@ class LoginView extends Component {
   // Lifecycle
   // ==================================================
   componentDidMount() {
-    if (this.props.isDemo) {
-      this.handleDemo();
-    }
     this.props.clearErrors();
   }
 
