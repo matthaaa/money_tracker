@@ -3,7 +3,7 @@ import {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 // Components
-import SessionForm from './components/session_form';
+import LoginForm from './forms/LoginForm';
 import MainLogo from '..//generic/logos/main_logo';
 import AppPreview from '../generic/app_preview';
 
@@ -65,18 +65,12 @@ class LoginView extends Component {
         <div className="logo-container">
           <MainLogo />
         </div>
-        <SessionForm
+        <LoginForm
           errors={this.props.errors}
           formUser={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
-      <a
-        className="instagram-link"
-        href="http://instagram.com"
-      >
-        {'Looking for Instagram?'}
-      </a>
       </div>
     );
   }
