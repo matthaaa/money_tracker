@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 
 // Components
 import SignUpViewContainer from './user_views/signup_view_container';
+import LoginViewContainer from './session_views/login_view_container';
 
 
 const App = ({children}) => (
@@ -11,6 +12,7 @@ const App = ({children}) => (
     <section className="main-view">
       <Switch>
         <Route exact path="/signup" component={SignUpViewContainer} />
+        <Route exact path="/login" component={LoginViewContainer} />
       </Switch>
     </section>
   </div>

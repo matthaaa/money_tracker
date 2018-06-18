@@ -3,9 +3,7 @@ import {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 // Components
-import LoginForm from './forms/LoginForm';
-import MainLogo from '..//generic/logos/main_logo';
-import AppPreview from '../generic/app_preview';
+import LoginForm from './forms/login_form';
 
 
 class LoginView extends Component {
