@@ -50,54 +50,16 @@ class LoginView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderLoginFooter() {
-    return (
-      <div className="toggle-footer fadeIn">
-        <p>Don't have an account?</p>
-        <Link className="toggle-footer-link" to={"/signup"}>Sign up</Link>
-      </div>
-    );
-  }
-
-  renderMainFormContent() {
-    return (
-      <div className="login-view-main-content fadeIn">
-        <div className="logo-container">
-          <MainLogo />
-        </div>
-        <LoginForm
-          errors={this.props.errors}
-          formUser={this.state}
-          onSubmit={this.handleSubmit}
-          onUpdate={this.handleUpdate}
-        />
-      </div>
-    );
-  }
-
-  renderRight() {
-    return (
-      <div className="login-view-content">
-        {this.renderMainFormContent()}
-        {this.renderLoginFooter()}
-      </div>
-    );
-  }
-
-  renderLeft() {
-    return (
-      <div className="signup-view-preview">
-        <AppPreview />
-      </div>
-    );
-  }
-
   render() {
     return (
       <main className="logged-out-view">
-        <div className="login-view-container">
-          {this.renderLeft()}
-          {this.renderRight()}
+        <div className="login-view-main-content fadeIn">
+          <LoginForm
+            errors={this.props.errors}
+            formUser={this.state}
+            onSubmit={this.handleSubmit}
+            onUpdate={this.handleUpdate}
+          />
         </div>
       </main>
     );
