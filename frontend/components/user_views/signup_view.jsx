@@ -52,6 +52,7 @@ class SignupView extends Component {
   // Render
   // ==================================================
   render() {
+    console.log(this.state);
     return (
       <div className="signup-view-main-content fadeIn">
         <NewUserForm
