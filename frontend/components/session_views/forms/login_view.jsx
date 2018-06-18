@@ -34,43 +34,6 @@ class LoginView extends Component {
   }
 
   // ==================================================
-  // Callbacks
-  // ==================================================
-  populateStateField(field, value) {
-    const letters = ("" + value).split("");
-    let resultInput = "";
-
-    const timer = setInterval(() => {
-      resultInput += letters.shift();
-
-      this.setState({[field]: resultInput});
-
-      if (letters.length === 0) {
-        clearInterval(timer, 0);
-      }
-    }, 120);
-  }
-
-  populateFieldAndLogin(username, password) {
-    const usernameDuration = 120 * username.length + 50;
-    const passwordDuration = 120 * password.length + 50;
-    const totalDuration = usernameDuration + passwordDuration;
-
-    this.populateStateField("username", username);
-
-    // Ensures password begins typing after username since
-    // these methods are asynchronous.
-    setTimeout(() => {
-      this.populateStateField("password", password);
-    }, (usernameDuration));
-
-    // Ensures login happens after demo has updated the state.
-    setTimeout(() => {
-      this.handleDemoLogin();
-    }, (totalDuration));
-  }
-
-  // ==================================================
   // Event Handlers
   // ==================================================
   handleUpdate(field) {
@@ -81,15 +44,6 @@ class LoginView extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state);
-  }
-
-  handleDemo() {
-    // TODO: Add demo user to secrets or hide credentials in some way.
-    this.populateFieldAndLogin("demo_lovati", "password");
-  }
-
-  handleDemoLogin() {
     this.props.login(this.state);
   }
 

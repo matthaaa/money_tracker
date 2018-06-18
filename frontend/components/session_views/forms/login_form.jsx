@@ -7,7 +7,7 @@ import FormInput from '../../generic/forms/form_input'
 import FormErrors from '../../generic/forms/form_errors';
 
 
-class SessionForm extends Component {
+class LoginForm extends Component {
 
   // ==================================================
   // Render
@@ -62,4 +62,4 @@ class SessionForm extends Component {
 };
 
 
-export default SessionForm;
+export default LoginForm;
