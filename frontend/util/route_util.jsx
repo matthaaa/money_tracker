@@ -6,7 +6,7 @@ import configureStore from '../store/store';
 
 const Auth = ({component: Component, exact, path, loggedIn}) => (
   <Route exact={exact} path={path} render={(props) => (
-    !loggedIn ? <Component {...props}/> : <Redirect to="/" />
+    !loggedIn ? <Component {...props}/> : <Redirect to="/home" />
   )}/>
 );
 

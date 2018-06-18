@@ -12,7 +12,7 @@ const App = ({children}) => (
   <div>
     <section className="main-view">
       <Switch>
-        <ProtectedRoute exact path="/" component={DashboardView} />
+        <ProtectedRoute exact path="/home" component={DashboardView} />
         <AuthRoute exact path="/signup" component={SignUpViewContainer} />
         <AuthRoute exact path="/login" component={LoginViewContainer} />
       </Switch>
