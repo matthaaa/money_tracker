@@ -19,7 +19,7 @@ class DashboardView extends Component {
     const {currentUser} = this.props;
 
     return (
-      <div>Welcome, {currentUser}!</div>
+      <div>Welcome, {currentUser.first_name}!</div>
     );
   }
 
