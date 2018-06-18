@@ -11,11 +11,11 @@ import LoginView from './login_view';
 
 
 const mapStateToProps = (state, ownProps) => {
-return ({
-  user: {username: "", password: ""},
-  errors: state.errors,
-  isDemo: (ownProps.match.params.demo === "demo"),
-})}
+  return ({
+    user: {username: "", password: ""},
+    errors: state.errors,
+  }
+)}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   login: (user) => dispatch(login(user)),
