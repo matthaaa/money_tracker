@@ -36,8 +36,6 @@ class User < ApplicationRecord
     user
   end
 
-
-
   private
   def ensure_token
     self.session_token ||= SecureRandom.urlsafe_base64
@@ -50,8 +48,4 @@ class User < ApplicationRecord
   def initialize_img_url
     self.img_url ||= ""
   end
-  #
-  # def initialize_bio
-  #   @bio ||= ""
-  # end
 end
