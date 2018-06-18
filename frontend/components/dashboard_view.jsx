@@ -17,6 +17,7 @@ class DashboardView extends Component {
   // ==================================================
   render() {
     return (
+      <div>Welcome</div>
     );
   }
 
