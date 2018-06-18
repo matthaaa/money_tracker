@@ -5,8 +5,13 @@ import {withRouter} from 'react-router';
 import DashboardView from './dashboard_view';
 
 
-const mapStateToProps = (state, ownProps) => ({
-})
+const mapStateToProps = (state, ownProps) => {
+  const currentUser = state.session.currentUser;
+
+  return ({
+    currentUser,
+  });
+}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
 })
