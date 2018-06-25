@@ -1,6 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 
+// Components
+import MainHeaderContainer from './generic/main_header_container';
+
 
 class DashboardView extends Component {
 
@@ -19,7 +22,10 @@ class DashboardView extends Component {
     const {currentUser} = this.props;
 
     return (
-      <div>Welcome, {currentUser.first_name}!</div>
+      <div>
+        <MainHeaderContainer />
+        <p>Welcome, {currentUser.first_name}!</p>
+      </div>
     );
   }
 
