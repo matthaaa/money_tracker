@@ -27,8 +27,6 @@ class MainHeader extends Component {
   // Render
   // ==================================================
   render() {
-    const {onToggleUploadView} = this.props;
-
     return (
       <header className="main-header-container">
         <CustomButton
