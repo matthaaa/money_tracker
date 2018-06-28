@@ -46,8 +46,13 @@ class LoginForm extends Component {
     } = this.props;
 
     return (
-      <div>
-        <form className="login-form">
+      <div className="login-form-container">
+        <div className="login-form-prompt">
+          <p>
+            Login and check your finances!
+          </p>
+        </div>
+        <form className="login-form-content">
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
           <div className="signup-form-button">
