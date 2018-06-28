@@ -47,8 +47,8 @@ class LoginView extends Component {
   // ==================================================
   render() {
     return (
-      <main className="logged-out-view fadeIn">
-        <div className="login-view-main-content">
+      <main className="logged-out-view">
+        <div className="login-view-main-content fadeIn">
           <LoginForm
             errors={this.props.errors}
             formUser={this.state}
