@@ -6,3 +6,29 @@ $black: #1A1423;
 $red: #B80C09;
 
 // Classes
+.logged-out-view {
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.login-view-main-content {
+
+}
+
+// Animation
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
