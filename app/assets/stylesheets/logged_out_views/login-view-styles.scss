@@ -8,6 +8,10 @@ $red: #B80C09;
 // Classes
 .logged-out-view {
   height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-view-main-content {
