@@ -26,7 +26,21 @@ $red: #B80C09;
   font-weight: 100;
 }
 
+.password-input {
+  margin-top: 10px;
+}
+
 .form-input {
+}
+
+.login-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: $light-blue;
+  border-radius: 4px;
+
+  //text
+  color: white;
 }
 
 // Animation

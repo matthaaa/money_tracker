@@ -30,7 +30,7 @@ class LoginForm extends Component {
       <FormInput
         type="password"
         placeholder={"Password"}
-        contentClassName={"login-input"}
+        contentClassName={"login-input password-input"}
         value={formUser.password}
         onChange={onUpdate('password')}
       />
@@ -49,9 +49,11 @@ class LoginForm extends Component {
       <form className="login-form-content">
         {this.renderUsernameInput(formUser, onUpdate)}
         {this.renderPasswordInput(formUser, onUpdate)}
-        <div className="signup-form-button">
-          <CustomButton text={"Log In"} onPress={onSubmit} />
-        </div>
+        <CustomButton
+          className="login-button"
+          text={"Log In"}
+          onPress={onSubmit}
+        />
         <FormErrors errors={errors} />
       </form>
     );
