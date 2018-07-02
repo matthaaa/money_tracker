@@ -46,21 +46,14 @@ class LoginForm extends Component {
     } = this.props;
 
     return (
-      <div className="login-form-container">
-        <div className="login-form-prompt">
-          <p>
-            Login and check your finances!
-          </p>
+      <form className="login-form-content">
+        {this.renderUsernameInput(formUser, onUpdate)}
+        {this.renderPasswordInput(formUser, onUpdate)}
+        <div className="signup-form-button">
+          <CustomButton text={"Log In"} onPress={onSubmit} />
         </div>
-        <form className="login-form-content">
-          {this.renderUsernameInput(formUser, onUpdate)}
-          {this.renderPasswordInput(formUser, onUpdate)}
-          <div className="signup-form-button">
-            <CustomButton text={"Log In"} onPress={onSubmit} />
-          </div>
-          <FormErrors errors={errors} />
-        </form>
-      </div>
+        <FormErrors errors={errors} />
+      </form>
     );
   }
 
