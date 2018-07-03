@@ -37,6 +37,7 @@ $red: #B80C09;
   margin-top: 30px;
   padding: 10px 20px;
   background-color: $light-blue;
+  border: 1px solid $light-blue;
   border-radius: 4px;
 
   //text
@@ -44,6 +45,10 @@ $red: #B80C09;
 }
 
 .login-button:hover {
+  background-color: white;
+
+  // text
+  color: $light-blue;
 }
 
 // Animation
