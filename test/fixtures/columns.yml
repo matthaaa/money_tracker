@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_type: MyString
+  time_value: 1
+  budget_id: 1
+
+two:
+  time_type: MyString
+  time_value: 1
+  budget_id: 1
