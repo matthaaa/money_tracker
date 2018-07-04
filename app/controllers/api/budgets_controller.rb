@@ -1,4 +1,4 @@
-class Api::BudgetController < ApplicationController
+class Api::BudgetsController < ApplicationController
   def new
   end
 
