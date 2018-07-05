@@ -25,6 +25,7 @@ class DashboardView extends Component {
       <div>
         <MainHeaderContainer />
         <p>Welcome, {currentUser.first_name}!</p>
+        <Link to="/budgets/new">New Budget</Link>
       </div>
     );
   }
