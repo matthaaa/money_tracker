@@ -16,4 +16,8 @@ class Budget < ApplicationRecord
     foreign_key: :budget_id,
     class_name: :Column
 
+  has_many :cells,
+    through: :columns,
+    source: :cells
+
 end
