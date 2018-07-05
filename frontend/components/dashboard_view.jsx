@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 // Components
 import MainHeaderContainer from './generic/main_header_container';
