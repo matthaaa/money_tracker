@@ -6,6 +6,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import DashboardView from './dashboard_container';
 import SignUpViewContainer from './user_views/signup_view_container';
 import LoginViewContainer from './session_views/login_view_container';
+import NewBudgetViewContainer from './budget_views/new_budget_view_container';
 
 
 const App = ({children}) => (
