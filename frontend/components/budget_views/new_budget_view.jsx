@@ -1,23 +1,49 @@
 import React from 'react';
 import {Component} from 'react';
 
+import NewCellForm from './forms/new_cell_form';
+
 
 class NewBudgetView extends Component {
 
   // ==================================================
   // Initialize
   // ==================================================
+  constructor(props) {
+    super(props);
+    this.state = {
+      cell: {
+        value: ""
+      },
+    }
+  }
 
   // ==================================================
   // Methods
   // ==================================================
+  handleUpdate(field) {
+    return (event) => {
+      this.setState({
+        cell: Object.assign(this.state.cell, {
+          [field]: event.target.value,
+        })
+      });
+    }
+  }
 
   // ==================================================
   // Render
   // ==================================================
   render() {
     return (
-      <div>hi mom!</div>
+      <div className="new-budget-container">
+        <NewCellForm
+          errors={this.props.errors}
+          formCell={this.state}
+          onSubmit={this.handleSubmit}
+          onUpdate={this.handleUpdate("value")}
+        />
+      </div>
     );
   }
 
