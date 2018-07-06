@@ -14,6 +14,8 @@ class NewBudgetView extends Component {
     this.state = {
       budget: {
       },
+      column: {
+      },
       cell: {
         value: undefined,
       },
