@@ -20,6 +20,7 @@ class NewBudgetView extends Component {
         value: undefined,
       },
     };
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   // ==================================================
