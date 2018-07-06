@@ -13,10 +13,10 @@ const App = ({children}) => (
   <div>
     <section className="main-view">
       <Switch>
+        <ProtectedRoute exact path="/budgets/new" component={NewBudgetViewContainer} />
         <ProtectedRoute exact path="/" component={DashboardView} />
         <AuthRoute exact path="/signup" component={SignUpViewContainer} />
         <AuthRoute exact path="/login" component={LoginViewContainer} />
-        <AuthRoute exact path="/budgets/new" component={NewBudgetViewContainer} />
       </Switch>
     </section>
   </div>
