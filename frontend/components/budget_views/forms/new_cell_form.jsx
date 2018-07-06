@@ -17,7 +17,7 @@ class NewCellForm extends Component {
       <FormInput
         placeholder={""}
         contentClassName={"new-cell-input"}
-        value={formUser.password}
+        value={formCell.value}
         onChange={onUpdate('value')}
       />
     );
@@ -26,7 +26,7 @@ class NewCellForm extends Component {
   render() {
     const {
       errors,
-      formUser,
+      formCell,
       onUpdate,
       onSubmit,
     } = this.props;

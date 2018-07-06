@@ -13,15 +13,16 @@ class NewBudgetView extends Component {
     super(props);
     this.state = {
       cell: {
-        value: ""
+        value: "",
       },
-    }
+    };
   }
 
   // ==================================================
   // Methods
   // ==================================================
   handleUpdate(field) {
+    console.log("hello");
     return (event) => {
       this.setState({
         cell: Object.assign(this.state.cell, {
@@ -39,7 +40,7 @@ class NewBudgetView extends Component {
       <div className="new-budget-container">
         <NewCellForm
           errors={this.props.errors}
-          formCell={this.state}
+          formCell={this.state.cell}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate("value")}
         />
