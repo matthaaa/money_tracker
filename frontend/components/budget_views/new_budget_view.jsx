@@ -17,6 +17,7 @@ class NewBudgetView extends Component {
   // ==================================================
   render() {
     return (
+      <div>hi mom!</div>
     );
   }
 
