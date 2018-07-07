@@ -1,8 +1,10 @@
 class Api::BudgetsController < ApplicationController
   def new
+    @budget = budget.new
   end
 
   def create
+    @budget = budget.new(budget_params)
   end
 
   def edit
@@ -18,5 +20,10 @@ class Api::BudgetsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def budget_params
+    params.require(:budget).permit(:user_id)
   end
 end
