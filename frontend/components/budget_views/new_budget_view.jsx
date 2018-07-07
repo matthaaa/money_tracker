@@ -12,12 +12,10 @@ class NewBudgetView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      budget: {
-      },
       column: {
       },
       cell: {
-        value: undefined,
+        value: "",
       },
     };
     this.handleUpdate = this.handleUpdate.bind(this);
