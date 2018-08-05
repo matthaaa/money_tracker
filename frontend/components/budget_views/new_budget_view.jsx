@@ -12,8 +12,8 @@ class NewBudgetView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      column: {
-      },
+      // column: {
+      // },
       cell: {
         value: "",
       },
