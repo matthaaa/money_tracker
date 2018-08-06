@@ -36,6 +36,15 @@ class NewBudgetView extends Component {
     }
   }
 
+  handleSubmit() {
+    this.props.addCell(this.state.cell);
+    this.setState({
+      comment: Object.assign(this.state.cell, {
+        body: "",
+      })
+    })
+  }
+
   // ==================================================
   // Render
   // ==================================================
