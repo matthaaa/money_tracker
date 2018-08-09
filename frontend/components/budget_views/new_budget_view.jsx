@@ -17,6 +17,7 @@ class NewBudgetView extends Component {
       },
     };
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // ==================================================
