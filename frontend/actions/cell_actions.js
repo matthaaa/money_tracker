@@ -1,4 +1,4 @@
-import * CellAPIUtil from '../util/cell_api_util';
+import * as CellAPIUtil from '../util/cell_api_util';
 
 
 export const RECEIVE_CELLS = 'RECEIVE_CELLS';

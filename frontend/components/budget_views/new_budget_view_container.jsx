@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {addCell} from '../../../actions/cell_actions';
+import {addCell} from '../../actions/cell_actions';
 
 // Components
 import NewBudgetView from './new_budget_view';
