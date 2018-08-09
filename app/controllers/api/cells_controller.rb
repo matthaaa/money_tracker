@@ -47,7 +47,7 @@ class Api::CellsController < ApplicationController
   private
   def cell_params
     params.require(:cell).permit(
-      :value, :column_id
+      :value,
     )
   end
 end
