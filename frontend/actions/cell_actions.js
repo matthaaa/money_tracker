@@ -12,6 +12,10 @@ export const requestCell = (cell) => dispatch => (
   CellAPIUtil.fetchCell(cell.id).then(payload => dispatch(receiveCell(payload)))
 )
 
+export const addCell = (cell) => dispatch => (
+  CellAPIUtil.createCell(cell).then(cell => dispatch(receiveCell(cell)))
+)
+
 export const receiveCells = (cells) => ({
   type: RECEIVE_CELLS,
   cells,
