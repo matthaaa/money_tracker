@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
+import {addCell} from '../../../actions/cell_actions';
 
 // Components
 import NewBudgetView from './new_budget_view';
@@ -9,6 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
+  addCell: (cell) => dispatch(addCell(cell))
 })
 
 
