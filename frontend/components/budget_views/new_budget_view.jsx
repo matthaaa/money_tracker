@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component} from 'react';
 
-import NewCellForm from './forms/new_cell_form';
+import NewBudgetForm from './forms/new_budget_form';
 
 
 class NewBudgetView extends Component {
@@ -13,12 +13,8 @@ class NewBudgetView extends Component {
     super(props);
     this.state = {
       budget: {
-        user_id: this.props.currentUser.id,
         name: "",
-      }
-      cell: {
-        budget_id: null,
-        value: "",
+        user_id: this.props.currentUser.id,
       },
     };
     this.handleUpdate = this.handleUpdate.bind(this);
@@ -29,49 +25,32 @@ class NewBudgetView extends Component {
   // Methods
   // ==================================================
   handleUpdate(field) {
-    console.log(field);
-    console.log(event);
     return (event) => {
       this.setState({
-        cell: Object.assign(this.state.cell, {
+        budget: Object.assign(this.state.budget, {
           [field]: event.target.value,
         })
       });
     }
   }
 
-  handleSubmit() {
-    this.props.addCell(this.state.cell);
-    this.setState({
-      comment: Object.assign(this.state.cell, {
-        body: "",
-      })
-    })
+  handleSubmit(event) {
+    console.log(this.state.budget);
+    this.props.addBudget(this.state.budget);
   }
 
   // ==================================================
   // Render
   // ==================================================
-  renderCellForm() {
-    return (
-      <NewCellForm
-        errors={this.props.errors}
-        formCell={this.state.cell}
-        onSubmit={this.handleSubmit}
-        onUpdate={this.handleUpdate}
-      />
-    );
-  }
-
-  renderContent() {
-    // TODO: Insert condition for showing new budget or new cell form.
-    return this.renderCellForm();
-  }
-
   render() {
     return (
       <div className="new-budget-container">
-        {this.renderContent()}
+        <NewBudgetForm
+          errors={this.props.errors}
+          formBudget={this.state.budget}
+          onSubmit={this.handleSubmit}
+          onUpdate={this.handleUpdate}
+        />
       </div>
     );
   }

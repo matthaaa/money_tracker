@@ -1,10 +1,15 @@
 class Api::BudgetsController < ApplicationController
   def new
-    @budget = budget.new
+    @budget = Budget.new
   end
 
   def create
-    @budget = budget.new(budget_params)
+    @budget = Budget.new(budget_params)
+    if @budget.save!
+      render :show
+    else
+      render json: @budget.errors.full_messages, status: 400
+    end
   end
 
   def edit
