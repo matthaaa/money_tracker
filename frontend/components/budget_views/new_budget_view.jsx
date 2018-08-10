@@ -13,7 +13,7 @@ class NewBudgetView extends Component {
     super(props);
     this.state = {
       cell: {
-        user_id: this.props.currentUser.id;
+        user_id: this.props.currentUser.id,
         value: "",
       },
     };
