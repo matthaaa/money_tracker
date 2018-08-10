@@ -1,10 +1,10 @@
 class Api::CellsController < ApplicationController
   def new
-    @cell = cell.new
+    @cell = Cell.new
   end
 
   def create
-    @cell = cell.new(cell_params)
+    @cell = Cell.new(cell_params)
 
     if @cell.save!
       @budget = @cell.budget
@@ -15,15 +15,15 @@ class Api::CellsController < ApplicationController
   end
 
   def index
-    @cells = cell.all
+    @cells = Cell.all
   end
 
   def show
-    @cell = cell.find_by(id: params[:id])
+    @cell = Cell.find_by(id: params[:id])
     if @cell
       render :show
     else
-      render json: 'cell not found!', status: 404
+      render json: 'Cell not found!', status: 404
     end
   end
 
@@ -34,7 +34,7 @@ class Api::CellsController < ApplicationController
   end
 
   def destroy
-    @cell = cell.find_by(id: params[:id])
+    @cell = Cell.find_by(id: params[:id])
 
     @budget = @cell.budget
     if @cell.destroy
