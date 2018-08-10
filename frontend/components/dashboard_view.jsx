@@ -15,7 +15,7 @@ class DashboardView extends Component {
     super(props);
     this.state = {
       budget: {
-        
+        user_id: this.state.currentUser.id,
       },
     };
     this.handleCreateBudget = this.handleCreateBudget.bind(this);
@@ -40,7 +40,7 @@ class DashboardView extends Component {
         <p>Welcome, {currentUser.first_name}!</p>
         <Link
           onClick={this.handleCreateBudget}
-          to="/budgets/new">
+          to={`/budgets/${this.props.budget.id}`}>
           New Budget
         </Link>
       </div>
