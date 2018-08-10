@@ -15,7 +15,7 @@ const App = ({children}) => (
     <section className="main-view">
       <Switch>
         <ProtectedRoute exact path="/budgets/new" component={NewBudgetViewContainer} />
-        <ProtectedRoute exact path="/budgets/:budgerId" component={NewCellsViewContainer} />
+        <ProtectedRoute exact path="/budgets/:budgetId" component={NewCellsViewContainer} />
         <ProtectedRoute exact path="/" component={DashboardView} />
         <AuthRoute exact path="/signup" component={SignUpViewContainer} />
         <AuthRoute exact path="/login" component={LoginViewContainer} />
