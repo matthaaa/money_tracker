@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {addBudget} from '../../actions/budget_actions';
+import {addBudget} from '../actions/budget_actions';
 
 // Components
 import DashboardView from './dashboard_view';
