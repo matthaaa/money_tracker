@@ -1,5 +1,5 @@
 class Cell < ApplicationRecord
-  validates :user_id, presence: true
+  validates :value, presence: true
   # ==================================================
   # Associations
   # ==================================================
