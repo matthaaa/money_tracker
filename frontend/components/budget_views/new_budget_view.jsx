@@ -35,7 +35,6 @@ class NewBudgetView extends Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state.budget);
     this.props.addBudget(this.state.budget);
   }
 
@@ -43,7 +42,6 @@ class NewBudgetView extends Component {
   // Render
   // ==================================================
   render() {
-    console.log(this.props);
     return (
       <div className="new-budget-container">
         <NewBudgetForm
