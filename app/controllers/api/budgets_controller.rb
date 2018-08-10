@@ -24,6 +24,6 @@ class Api::BudgetsController < ApplicationController
 
   private
   def budget_params
-    params.require(:budget).permit(:user_id)
+    params.require(:budget).permit(:name, :user_id)
   end
 end
