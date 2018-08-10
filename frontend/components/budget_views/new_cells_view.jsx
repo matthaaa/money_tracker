@@ -1,10 +1,10 @@
 import React from 'react';
 import {Component} from 'react';
 
-import NewBudgetForm from './forms/new_budget_form';
+import NewCellForm from './forms/new_cell_form';
 
 
-class NewBudgetView extends Component {
+class NewCellsView extends Component {
 
   // ==================================================
   // Initialize
@@ -12,9 +12,9 @@ class NewBudgetView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      budget: {
+      cell: {
         name: "",
-        user_id: this.props.currentUser.id,
+        budget_id: this.props.budget.id,
       },
     };
     this.handleUpdate = this.handleUpdate.bind(this);
@@ -27,7 +27,7 @@ class NewBudgetView extends Component {
   handleUpdate(field) {
     return (event) => {
       this.setState({
-        budget: Object.assign(this.state.budget, {
+        cell: Object.assign(this.state.cell, {
           [field]: event.target.value,
         })
       });
@@ -35,20 +35,18 @@ class NewBudgetView extends Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state.budget);
-    this.props.addBudget(this.state.budget);
+    this.props.addCell(this.state.cell);
   }
 
   // ==================================================
   // Render
   // ==================================================
   render() {
-    console.log(this.props);
     return (
-      <div className="new-budget-container">
-        <NewBudgetForm
+      <div className="new-cells-container">
+        <NewCellForm
           errors={this.props.errors}
-          formBudget={this.state.budget}
+          formCell={this.state.budget}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
@@ -58,4 +56,4 @@ class NewBudgetView extends Component {
 
 };
 
-export default NewBudgetView;
+export default NewCellsView;
