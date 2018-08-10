@@ -25,7 +25,7 @@ class DashboardView extends Component {
   // Methods
   // ==================================================
   handleCreateBudget() {
-
+    this.props.addBudget(this.state.budget);
   }
 
   // ==================================================
