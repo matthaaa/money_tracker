@@ -18,3 +18,5 @@ const budgetReducer = (oldState = {}, action) => {
         return oldState;
   }
 }
+
+export default budgetReducer;
