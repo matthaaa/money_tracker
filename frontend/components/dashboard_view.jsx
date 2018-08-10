@@ -11,10 +11,22 @@ class DashboardView extends Component {
   // ==================================================
   // Initialize
   // ==================================================
+  constructor(props) {
+    super(props);
+    this.state = {
+      budget: {
+        
+      },
+    };
+    this.handleCreateBudget = this.handleCreateBudget.bind(this);
+  }
 
   // ==================================================
   // Methods
   // ==================================================
+  handleCreateBudget() {
+
+  }
 
   // ==================================================
   // Render
@@ -26,7 +38,11 @@ class DashboardView extends Component {
       <div>
         <MainHeaderContainer />
         <p>Welcome, {currentUser.first_name}!</p>
-        <Link to="/budgets/new">New Budget</Link>
+        <Link
+          onClick={this.handleCreateBudget}
+          to="/budgets/new">
+          New Budget
+        </Link>
       </div>
     );
   }
