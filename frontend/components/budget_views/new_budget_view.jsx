@@ -48,15 +48,26 @@ class NewBudgetView extends Component {
   // ==================================================
   // Render
   // ==================================================
+  renderCellForm() {
+    return (
+      <NewCellForm
+        errors={this.props.errors}
+        formCell={this.state.cell}
+        onSubmit={this.handleSubmit}
+        onUpdate={this.handleUpdate}
+      />
+    );
+  }
+
+  renderContent() {
+    // TODO: Insert condition for showing new budget or new cell form.
+    return this.renderCellForm();
+  }
+
   render() {
     return (
       <div className="new-budget-container">
-        <NewCellForm
-          errors={this.props.errors}
-          formCell={this.state.cell}
-          onSubmit={this.handleSubmit}
-          onUpdate={this.handleUpdate}
-        />
+        {this.renderContent()}
       </div>
     );
   }
