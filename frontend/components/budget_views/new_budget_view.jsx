@@ -22,6 +22,13 @@ class NewBudgetView extends Component {
   }
 
   // ==================================================
+  // Lifecycle
+  // ==================================================
+  componentDidMount() {
+    this.props.requestBudgets();
+  }
+
+  // ==================================================
   // Methods
   // ==================================================
   handleUpdate(field) {

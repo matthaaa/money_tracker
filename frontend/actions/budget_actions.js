@@ -8,6 +8,10 @@ export const addBudget = (budget) => dispatch => (
   BudgetAPIUtil.createBudget(budget).then(payload => dispatch(receiveBudget(payload)))
 );
 
+export const requestBudgets = () => dispatch => (
+  BudgetAPIUtil.fetchBudgets().then(budgets => dispatch(receiveBudgets(budgets)))
+);
+
 export const requestBudget = (budgetId) => dispatch => (
   BudgetAPIUtil.fetchBudget(budgetId).then(payload => dispatch(receiveBudget(payload)))
 );

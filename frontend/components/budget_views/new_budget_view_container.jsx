@@ -12,9 +12,13 @@ import NewBudgetView from './new_budget_view';
 
 const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
+  const budgets = currentUser.budgets;
+  console.log(state);
+  console.log(ownProps);
 
   return ({
     currentUser,
+    budgets,
   });
 }
 

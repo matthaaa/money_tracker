@@ -19,6 +19,13 @@ class Api::BudgetsController < ApplicationController
   end
 
   def index
+    if params[:user_id]
+      @budgets = Budget.where(user_id: params[:user_id])
+      render :index
+    else
+      @budgets = Budget.all
+      render :index
+    end
   end
 
   def show
