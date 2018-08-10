@@ -29,6 +29,12 @@ class Api::BudgetsController < ApplicationController
   end
 
   def show
+    @budget = Budget.find_by(id: params[:id])
+    if @budget
+      render :show
+    else
+      render json: 'Budget not found!', status: 404
+    end
   end
 
   def destroy

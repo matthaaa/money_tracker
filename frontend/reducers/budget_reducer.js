@@ -6,7 +6,6 @@ import {
 } from '../actions/budget_actions';
 
 const budgetReducer = (oldState = {}, action) => {
-  console.log("HELLO");
   Object.freeze(oldState);
 
   switch(action.type) {
