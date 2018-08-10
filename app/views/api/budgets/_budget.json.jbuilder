@@ -1,1 +1,1 @@
-json.extract! budget, :id, :user_id
+json.extract! budget, :id, :user_id, :name
