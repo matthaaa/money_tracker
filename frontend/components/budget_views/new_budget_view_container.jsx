@@ -6,8 +6,13 @@ import {addCell} from '../../actions/cell_actions';
 import NewBudgetView from './new_budget_view';
 
 
-const mapStateToProps = (state, ownProps) => ({
-})
+const mapStateToProps = (state, ownProps) => {
+  const currentUser = state.session.currentUser;
+
+  return ({
+    currentUser,
+  });
+}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   addCell: (cell) => dispatch(addCell(cell))
