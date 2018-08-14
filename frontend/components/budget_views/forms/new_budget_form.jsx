@@ -26,6 +26,7 @@ class NewBudgetForm extends Component {
   render() {
     const {
       errors,
+      budget,
       formBudget,
       onUpdate,
       onSubmit,
@@ -35,6 +36,8 @@ class NewBudgetForm extends Component {
       <form className="budget-form-content">
         {this.renderNameInput(formBudget, onUpdate)}
         <CustomButton
+          isLink
+          path={`/budgets/${budget.id}`}
           className="new-budget-submit-button"
           text={"Continue"}
           onPress={onSubmit}

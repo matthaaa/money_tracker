@@ -19,6 +19,11 @@ class NewBudgetView extends Component {
     };
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.nullBudget = {
+      id: null,
+      user_id: this.props.currentUser.id,
+      name: "",
+    }
   }
 
   // ==================================================
@@ -42,9 +47,13 @@ class NewBudgetView extends Component {
   // Render
   // ==================================================
   render() {
+    const {budgets} = this.props;
+    const budget = budgets === undefined ? this.nullBudget : budgets[Object.keys(budgets)[0]];
+
     return (
       <div className="new-budget-container">
         <NewBudgetForm
+          budget={budget}
           errors={this.props.errors}
           formBudget={this.state.budget}
           onSubmit={this.handleSubmit}
