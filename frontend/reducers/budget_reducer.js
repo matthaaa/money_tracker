@@ -5,6 +5,7 @@ import {
   RECEIVE_BUDGET,
 } from '../actions/budget_actions';
 
+
 const budgetReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
 
