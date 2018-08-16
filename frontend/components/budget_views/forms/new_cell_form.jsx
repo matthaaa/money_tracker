@@ -18,7 +18,7 @@ class NewCellForm extends Component {
         placeholder={""}
         contentClassName={"new-cell-input"}
         value={formCell.value}
-        onChange={onUpdate('value')}
+        onChange={onUpdate("value")}
       />
     );
   }

@@ -46,7 +46,7 @@ class NewCellsView extends Component {
       <div className="new-cells-container">
         <NewCellForm
           errors={this.props.errors}
-          formCell={this.state.budget}
+          formCell={this.state.cell}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
