@@ -10,7 +10,7 @@ import NewCellsView from './new_cells_view';
 
 const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
-  console.log(state);
+
   return ({
     currentUser,
     budget: ownProps.match.params.budgetId,
